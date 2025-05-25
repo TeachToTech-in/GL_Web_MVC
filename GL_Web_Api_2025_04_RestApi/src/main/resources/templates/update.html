@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org/">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container my-2" align="center">
+		<h2>Enter The Information</h2>
+		<form action="#" th:action="@{/save}" th:object="${student}" method="post">
+			<input type="hidden" th:field="*{id}" />
+			Student Name :<input type="text" th:field="*{name}" class="form-control mb-4 col-4"/>
+			Student Department :<input type="text" th:field="*{department}" class="form-control mb-4 col-4"/>
+			Student Contact :<input type="text" th:field="*{contact}" class="form-control mb-4 col-4" align="left"/>
+			<button type="submit" class="btn btn-info col-2">ADD/Update</button><br>
+		</form>
+		<a th:href="@{/allstudents}" class="btn btn-primary btn-sm mb-3">Back</a>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Information As Follows </h1>
+    <h2 th:text="${stu.name}">Student Name</h2>
+    <h2 th:text="${stu.department}">Student Department</h2>
+    <h2 th:text="${stu.contact}">Student Contact</h2>
+
+    <div th:object="${stu}">
+    <h2 th:text="*{name}">Student Name</h2>
+    <h2 th:text="*{department}">Student Department</h2>
+    <h2 th:text="*{contact}">Student Contact</h2>
+
+    </div>
+</body>
+</html>
