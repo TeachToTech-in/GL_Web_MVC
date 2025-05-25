@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 		@Autowired
 		private CourseConfiguration config;
 		
-		@GetMapping("/course")
+		@GetMapping(path={"/course","/"})
 		public Course getCourse() {
 			return new Course(config.getId(),config.getCourse(),config.getDepartment());
 		}
